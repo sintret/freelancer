@@ -16,8 +16,8 @@ require(__DIR__ . '/autoload.php');
 
 #### 3. Working with query pdo :
 this is example to load model in folder models, you must to extends from sintret\pdo\Db
-see autoload models in folder models
-models/BaseModel
+
+models/BaseModel.php
 ```
 class BaseModel extends sintret\pdo\Db{
     public function __construct() {
@@ -35,3 +35,26 @@ echo "<pre>";print_r($songs);
 ```
 
 
+#### 4. Working with model :
+This example  create simple class Song look like this following
+```
+class Song extends sintret\pdo\Crud {
+
+    protected $table = 'song';
+
+    # Primary Key of the table
+    protected $pk = 'id';
+    // ling to class db connection here 
+    public $className = 'BaseModel';
+}
+```
+##### 4.1 Create / Save with model
+Example for create new Song code will create new record song like these following code:
+
+$model = new Song();
+$model->title = 'Disaat Aku Tersakiti';
+$model->artist = 'Dadali';
+$model->album = ' Disaat Aku Tersakiti';
+$model->createDate = date("Y-m-d H:i:s");
+$model->status = 1;
+$model->create();
