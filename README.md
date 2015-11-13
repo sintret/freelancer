@@ -48,9 +48,10 @@ class Song extends sintret\pdo\Crud {
     public $className = 'BaseModel';
 }
 ```
-##### 4.1 Create / Save with model
-Example for create new Song code will create new record song like these following code:
 
+#### 5. Create / Save with model
+Example for create new Song code will create new record song like these following code:
+```
 $model = new Song();
 $model->title = 'Disaat Aku Tersakiti';
 $model->artist = 'Dadali';
@@ -58,3 +59,4 @@ $model->album = ' Disaat Aku Tersakiti';
 $model->createDate = date("Y-m-d H:i:s");
 $model->status = 1;
 $model->create();
+```
