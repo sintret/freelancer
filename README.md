@@ -15,8 +15,9 @@ require(__DIR__ . '/autoload.php');
 ```
 
 #### 3. Working with query pdo :
-//this is example to load model in folder models, you must to extends from sintret\pdo\Db
-// models/BaseModel  --> autoload models in folder models
+this is example to load model in folder models, you must to extends from sintret\pdo\Db
+see autoload models in folder models
+models/BaseModel
 ```
 class BaseModel extends sintret\pdo\Db{
     public function __construct() {
@@ -25,7 +26,7 @@ class BaseModel extends sintret\pdo\Db{
     
 } 
 ```
-//index.php
+index.php
 ```
 $db = new BaseModel;
 
