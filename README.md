@@ -60,3 +60,23 @@ $model->createDate = date("Y-m-d H:i:s");
 $model->status = 1;
 $model->create();
 ```
+
+#### 6. Find with model
+Example for find  Song code will create new record song like these following code:
+```
+$model = new Song();
+$model->find(1);
+
+echo $model->title;
+echo $model->artist;
+```
+
+#### 7. Update where with model
+Example for find  Song code will create new record song like these following code:
+```
+$model = new Song();
+$model->find(1);
+
+echo $model->title;
+echo $model->artist;
+```
