@@ -34,6 +34,51 @@ $songs = $db->query("SELECT * FROM song");
 echo "<pre>";print_r($songs);
 ```
 
+#### Fetching Row:
+This method always returns only 1 row.
+```php
+<?php
+// Fetch a row
+$ages     =  $db->row("SELECT * FROM song WHERE  id = :id", array("id"=>"1"));
+```
+#### Fetching Single Value:
+This method returns only one single value of a record.
+```php
+<?php
+// Fetch one single value
+$db->bind("id","3");
+$firstname = $db->single("SELECT title FROM song WHERE id = :id");
+```
+##### Result
+|title
+|:------------:
+| Aku disini
+#### Fetching Column:
+```php
+<?php
+// Fetch a column
+$names    =  $db->column("SELECT title FROM song");
+
+### Delete / Update / Insert
+When executing the delete, update, or insert statement by using the query method the affected rows will be returned.
+```php
+<?php
+
+// Delete
+$delete   =  $db->query("DELETE FROM song WHERE id = :id", array("id"=>"1"));
+
+// Update
+$update   =  $db->query("UPDATE song SET title = :f WHERE id = :id", array("f"=>"Jan","id"=>"2"));
+
+// Insert
+$insert   =  $db->query("INSERT INTO song(title,status) VALUES(:title,:status)", array("title"=>"Vivek","status"=>"20"));
+
+// Do something with the data 
+if($insert > 0 ) {
+  return 'Succesfully created a new person !';
+}
+
+```
 
 #### 4. Working with model :
 This example  create simple class Song look like this following
