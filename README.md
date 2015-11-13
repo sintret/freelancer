@@ -70,13 +70,42 @@ $model->find(1);
 echo $model->title;
 echo $model->artist;
 ```
+or with multiple 
+```
+$model = new Song();
+$model->find(['artist '=>'Dadali','status'=>1]);
+
+echo $model->title;
+echo $model->artist;
+```
 
 #### 7. Update where with model
 Example for find  Song code will create new record song like these following code:
 ```
 $model = new Song();
-$model->find(1);
+$model->status = 2;
+$model->rate = 66;
+$model->save(3);
+```
 
-echo $model->title;
-echo $model->artist;
+#### 8. Delete with model
+Example for delete  Song code will create new record song like these following code:
+```
+$model = new Song();
+$model->delete(1);
+```
+
+#### 9. Find All with model
+Example for delete  Song code will create new record song like these following code:
+```
+$model = new Song();
+$model->all();
+echo "<pre>"; print_r($model);
+```
+#### 10. Saving with array models
+Example for save with array  Song code will create new record song like these following code:
+```
+$model = new Song(['title' => 'I can teach you', 'artist' => 'bon jovi','status'=>1]);
+$model->create();
+echo "<pre>"; print_r($model);
 ```
