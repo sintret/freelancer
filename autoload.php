@@ -23,13 +23,9 @@ spl_autoload_register(function($class_name) {
     // If it finds the same class in a directory later on, IT WILL IGNORE IT! Because of that require once!
     foreach ($dirs as $dir) {
         $filename = $dir . $class_name . '.php';
-        echo $filename;
         if (file_exists($filename)) {
-            echo $filename;
             require_once($filename);
             return;
-        } else {
-            //echo $dir;
         }
     }
 });
