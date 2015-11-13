@@ -5,7 +5,7 @@ Generate PHP Application with single command and PDO wrapper
 
 #### 1. Create project via composer :
 ```
-composer create-project -s dev sintret/freelance your-directory
+composer create-project -s dev sintret/freelancer your-directory
 ```
 
 #### 2. Bootstraping :
