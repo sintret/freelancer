@@ -1,0 +1,28 @@
+{
+    "name": "sintret/freelance",
+    "description": "sintret project with simple pdo and autoloading simple",
+    "keywords": [
+        "pdo",
+        "mysql",
+        "generate project"
+    ],
+    "homepage": "https://sintret.com",
+    "type": "pdo-extension",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/sintret/freelancer/issues",
+        "source": "https://github.com/sintret/freelancer"
+    },
+    "authors": [
+        {
+            "name": "Andy Fitria",
+            "homepage": "http://sintret.com"
+        }
+    ],
+    "require": {
+        "php":">=5.4.0",
+        "sintret/pdo": "dev-master"
+    },
+    "minimum-stability": "dev"
+   
+}
